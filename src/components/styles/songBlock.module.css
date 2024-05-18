@@ -1,0 +1,32 @@
+.songImage {
+  height: 240px;
+  width: 240px;
+}
+
+.imageContainer {
+  position: relative;
+  z-index: 1;
+}
+
+.icon {
+  height: 28px;
+  color: #ffffff;
+  position: absolute;
+  bottom: 10px;
+  right: 69px;
+}
+
+.songName {
+  margin-top: 5px;
+  color: grey;
+  line-height: 16.94px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.songArtist {
+  margin-top: 3px;
+  color: grey;
+  line-height: 14.52px;
+  font-size: 12px;
+}

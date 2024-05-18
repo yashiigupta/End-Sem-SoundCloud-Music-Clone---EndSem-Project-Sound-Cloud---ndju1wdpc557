@@ -1,0 +1,24 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #616161;
+  position: sticky;
+  top: 0;
+  z-index: 100; /* Adjust this value as needed */
+  height: 60px;
+  padding: 10px 28px;
+  color: #f2f2f2;
+}
+
+.brandName {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.signIn {
+  border: 1px solid #f2f2f2;
+  border-radius: 3px;
+  padding: 4px 12px 4px 12px;
+  font-size: 14px;
+}

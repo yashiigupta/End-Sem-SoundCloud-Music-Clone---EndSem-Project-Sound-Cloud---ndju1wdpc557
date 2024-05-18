@@ -1,0 +1,46 @@
+.block {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior:smooth;
+}
+
+.block > div {
+  flex: 0 0 auto;
+  width: 25%;  /* Set the width to 25% of the viewport width */
+  scroll-snap-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-weight: 300;
+  margin-top: 48px;
+  color: #474444;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.upTitle {
+  font-weight: 300;
+  margin-top: 30px;
+  color: #474444;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.downTitle {
+  font-weight: 300;
+  margin-top: 30px;
+  color: #474444;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.sTitle{
+  font-weight: 300;
+  margin-top: 43px;
+  color: #474444;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
