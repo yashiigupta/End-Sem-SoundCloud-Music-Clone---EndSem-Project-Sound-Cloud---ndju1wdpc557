@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import SongBlock from "./songBlock";
 import styles from './styles/block.module.css'
-function HappySongs() {
+function HappySongs(props) {
   const [data, setData] = useState(null);
 
   useEffect(() => {
@@ -25,12 +25,23 @@ function HappySongs() {
   }
 
   if (data){
-    console.log(data);
     return (
       <>
       <p className={styles.title}>Happy</p>
       <div className={styles.block}>
-        {data.data.map((i, index) => <SongBlock key={index} image={i.thumbnail} songName={i.title} songArtist={i.artist[0].name} />)}
+        {data.data.map((i, index) => {
+        const artistNames = i.artist.map(artist => artist.name).join(', ');
+          return (
+            <SongBlock
+              key={index}
+              songId={i._id}
+              image={i.thumbnail}
+              songName={i.title}
+              songArtist={artistNames}
+              {...props}
+            />
+          );
+        })}
       </div>
       </>
     );

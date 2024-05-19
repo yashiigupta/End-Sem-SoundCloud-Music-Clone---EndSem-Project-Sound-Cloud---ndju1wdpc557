@@ -1,11 +1,23 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate} from 'react-router-dom';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faSoundcloud } from '@fortawesome/free-brands-svg-icons';
 import Styles from './styles/navigation.module.css'
 import logo from './assets/soundCloud-logo.png'
 
-function NavigationBar() {
+function NavigationBar(props) {
+  const navigate = useNavigate();
+  const handleSignIN = () => {
+    if (props.isLoggedin) {
+      props.setLoggedin(false);
+      props.setUsername("");
+      props.setTokken(null);
+      alert('You have been sucessfully signed out');
+      navigate('/');
+    }else{
+      navigate('/signin')
+    }
+  }
   return (
     <div className={Styles.navigation}>
       <div>
@@ -14,9 +26,7 @@ function NavigationBar() {
         </Link>
         <span className={Styles.brandName}>SOUNDCLOUD</span>
       </div>
-      <Link to="/signin">
-        <button className={Styles.signIn}>Sign In</button>
-      </Link>
+      <button onClick = {handleSignIN} className={Styles.signIn}>{props.isLoggedin ? "Sign Out" : "Sign In"}</button>
     </div>
   );
 }

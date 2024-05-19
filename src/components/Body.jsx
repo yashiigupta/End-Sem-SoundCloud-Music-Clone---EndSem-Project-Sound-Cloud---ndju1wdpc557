@@ -6,18 +6,18 @@ import ExcitedSongs from "./excited";
 import Top20Songs from "./top20ofWeek";
 import Top50Songs from "./top50ofMonth";
 import EvergreenMelodies from "./evergreenMelodies";
-function Body() {
+function Body(props) {
   return (
     <div style={ {display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent : 'center', marginBottom: '35px'}}>
       <div style={{width : '1200px'}}>
-        <TrendingSongs />
-        <Top20Songs />
-        <RomanticSongs />
-        <HappySongs />
-        <EvergreenMelodies />
-        <SadSongs />
-        <Top50Songs />
-        <ExcitedSongs />
+        <TrendingSongs {...props}/>
+        <Top20Songs {...props} />
+        <RomanticSongs  {...props}/>
+        <HappySongs  {...props}/>
+        <EvergreenMelodies  {...props}/>
+        <SadSongs  {...props}/>
+        <Top50Songs  {...props}/>
+        <ExcitedSongs  {...props}/>
       </div>
     </div>
   )

@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import styles from './styles/authentication.module.css';
 import { Link, useNavigate } from 'react-router-dom';
-function SignIn() {
+function SignIn(props) {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -24,14 +24,14 @@ function SignIn() {
 
     const data = await response.json();
     const handleResponse = (data) => {
-      console.log(data);
       if(data.status === 'success'){alert(`Welcome to SoundCloud ${data.data.user.name}`)}
       else{alert('Please Check Your Credentials')};
-      console.log("I Got The Data");
-      if (response.ok) { // check if the request was successful
-        navigate('/'); // navigate to home page
+      if (response.ok) {
+        props.setUsername(data.data.user.name);
+        props.setTokken(data.token);
+        props.setLoggedin(true);
+        navigate('/');
       } else {
-        // handle error
         console.error(data);
       }
     };

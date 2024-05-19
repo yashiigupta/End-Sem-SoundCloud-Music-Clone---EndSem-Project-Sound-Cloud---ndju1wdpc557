@@ -1,11 +1,11 @@
 import NavigationBar from "./navigation";
 import Body from "./Body";
 
-function Home(){
+function Home(props){
   return(
     <div>
-      <NavigationBar />
-      <Body />
+      <NavigationBar {...props}/>
+      <Body {...props}/>
     </div>
   )
 }
