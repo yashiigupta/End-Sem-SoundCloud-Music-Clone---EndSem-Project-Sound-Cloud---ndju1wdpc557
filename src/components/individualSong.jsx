@@ -43,6 +43,8 @@ function IndividualSong(props) {
       let artistNames = '';
       console.log(data.data.artist)
       for (let i of data.data.artist){
+        // if (i.name != undefinedundefined){}
+        console.log(i);
         artistNames += i.name + ', ';
       }
       artistNames = artistNames.slice(0, -2) + '';
@@ -100,20 +102,19 @@ function IndividualSong(props) {
       <div className={styles.musicPlayer}>
        <div className={styles.container1}>
        <div className={styles.imageContainer}>
-        <img src={image} alt="display"></img>
+        <img src={image} alt="thumbnail"></img>
         </div>
         <div className={styles.cdContainer}>
           <div className={styles.cd}></div>
           <div className={styles.cd1}>
-            <img src={image} alt="display" style={{height: "242px", borderRadius: "50%"}}/>
+            <img src={image} alt="dispay" style={{height: "242px", borderRadius: "50%"}}/>
           </div>
         </div>
        </div>
         <div className={styles.controls}>
-          <img className={styles.controlsImg} src = {image} alt="thumbnail"></img>
           <div>
-            <p className={`${styles.songId} ${styles.truncate}`}>{songName}</p>
-            <p className={`${styles.songAuthor} ${styles.truncate}`}>{artists}</p>
+            <p className={styles.songId}>{songName}</p>
+            <p className={styles.songAuthor}>{artists}</p>
           </div>
         <button onClick={handlePlayPause}>{isPlaying ? <FontAwesomeIcon icon={faCirclePause} className={styles.buttonP}/> : <FontAwesomeIcon icon={faCirclePlay}  className={styles.buttonP}/>}</button>
         </div>

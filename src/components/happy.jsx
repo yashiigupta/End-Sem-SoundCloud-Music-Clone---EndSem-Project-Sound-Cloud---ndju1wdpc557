@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from "react";
 import SongBlock from "./songBlock";
-import styles from './styles/block.module.css'
+import styles from './styles/block.module.css';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import NextArrow from "./nextArrow";
+import PrevArrow from "./prevArrow";
 function HappySongs(props) {
   const [data, setData] = useState(null);
 
@@ -20,15 +25,29 @@ function HappySongs(props) {
     fetchData();
   }, []);
 
+  const settings = {
+    dots: false,
+    infinite: false,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />
+  };
   if (!data) {
     return <p>Loading...</p>;
   }
 
   if (data){
+    console.log(data);
     return (
       <>
-      <p className={styles.title}>Happy</p>
-      <div className={styles.block}>
+      <style jsx>{`
+        .slick-next:before, .slick-prev:before {
+          display: none !important;
+        }
+      `}</style>
+      <p className={styles.sTitle}>Happy</p>
+      <Slider {...settings}>
         {data.data.map((i, index) => {
         const artistNames = i.artist.map(artist => artist.name).join(', ');
           return (
@@ -42,10 +61,9 @@ function HappySongs(props) {
             />
           );
         })}
-      </div>
+      </Slider>
       </>
     );
   }
 };
-
 export default HappySongs;

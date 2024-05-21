@@ -71,7 +71,6 @@
   position: absolute;
   top: 25px;
   right: 20px;
-  margin-left: 10px;
 }
 
 .controls {
@@ -87,30 +86,14 @@
   border-radius: 8px;
 }
 
-.controlsImg {
-  height: 70px;
-  width: 70px;
-  border-radius: 50%;
-}
-
 .songId {
   font-size: 21px;
   color: #ffffff;
-  max-width: 200px;
-  margin-right: 20px;
 }
 
 .songAuthor {
   font-size: 12px;
   color: #ffffff;
-  max-width: 200px;
-  margin-right: 20px;
-}
-
-.truncate {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .body {

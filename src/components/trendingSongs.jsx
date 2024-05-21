@@ -1,6 +1,12 @@
 import React, { useEffect, useState } from "react";
 import SongBlock from "./songBlock";
-import styles from './styles/block.module.css'
+import styles from './styles/block.module.css';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+import NextArrow from "./nextArrow";
+import PrevArrow from "./prevArrow";
+
 function TrendingSongs(props) {
   const [data, setData] = useState(null);
 
@@ -20,6 +26,14 @@ function TrendingSongs(props) {
     fetchData();
   }, []);
 
+  const settings = {
+    dots: false,
+    infinite: false,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />
+  };
   if (!data) {
     return <p>Loading...</p>;
   }
@@ -28,8 +42,13 @@ function TrendingSongs(props) {
     console.log(data);
     return (
       <>
+      <style jsx>{`
+        .slick-next:before, .slick-prev:before {
+          display: none !important;
+        }
+      `}</style>
       <p className={styles.sTitle}>Trending Songs</p>
-      <div className={styles.block}>
+      <Slider {...settings}>
         {data.data.map((i, index) => {
         const artistNames = i.artist.map(artist => artist.name).join(', ');
           return (
@@ -43,7 +62,7 @@ function TrendingSongs(props) {
             />
           );
         })}
-      </div>
+      </Slider>
       </>
     );
   }
