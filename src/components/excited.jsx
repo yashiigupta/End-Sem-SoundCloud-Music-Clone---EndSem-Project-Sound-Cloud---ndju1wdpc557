@@ -48,7 +48,7 @@ function ExcitedSongs(props) {
           display: none !important;
         }
       `}</style>
-      <p className={styles.sTitle}>Exited</p>
+      <p className={styles.sTitle}>Excited</p>
       <Slider {...settings}>
         {data.data.map((i, index) => {
         const artistNames = i.artist.map(artist => artist.name).join(', ');
