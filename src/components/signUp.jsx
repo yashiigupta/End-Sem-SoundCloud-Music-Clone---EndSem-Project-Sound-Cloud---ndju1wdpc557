@@ -10,6 +10,27 @@ function SignUp() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    var count = 0;
+    var countSpecial = 0;
+    for(let c of name) {
+      if((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+      {
+        count++;
+      }
+      else if(c !== ' ')
+      {
+        countSpecial++;
+      }
+    }
+    if(count < 3) {
+      alert('Name must contain atleast 3 alphabetical characters');
+      return;
+    }
+
+    if(countSpecial >= 1) {
+      alert('Name must not have any special characters except a space');
+      return;
+    }
 
     if (!/\S+@\S+\.\S+/.test(email)) {
       alert('Email must contain "@"');
