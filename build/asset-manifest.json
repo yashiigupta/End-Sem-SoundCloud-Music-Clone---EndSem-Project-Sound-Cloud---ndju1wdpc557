@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.cb4d855a.css",
-    "main.js": "/static/js/main.6d8038ad.js",
-    "static/media/soundCloud-logo.png": "/static/media/soundCloud-logo.1baf77cfbe17e05a0d16.png",
-    "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
-    "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
-    "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
-    "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
-    "index.html": "/index.html",
-    "main.cb4d855a.css.map": "/static/css/main.cb4d855a.css.map",
-    "main.6d8038ad.js.map": "/static/js/main.6d8038ad.js.map"
+    "main.css": "/End-Sem-SoundCloud-Music-Clone---EndSem-Project-Sound-Cloud---ndju1wdpc557/static/css/main.eba59f21.css",
+    "main.js": "/End-Sem-SoundCloud-Music-Clone---EndSem-Project-Sound-Cloud---ndju1wdpc557/static/js/main.954a8794.js",
+    "static/media/soundCloud-logo.png": "/End-Sem-SoundCloud-Music-Clone---EndSem-Project-Sound-Cloud---ndju1wdpc557/static/media/soundCloud-logo.1baf77cfbe17e05a0d16.png",
+    "static/media/slick.svg": "/End-Sem-SoundCloud-Music-Clone---EndSem-Project-Sound-Cloud---ndju1wdpc557/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/End-Sem-SoundCloud-Music-Clone---EndSem-Project-Sound-Cloud---ndju1wdpc557/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/End-Sem-SoundCloud-Music-Clone---EndSem-Project-Sound-Cloud---ndju1wdpc557/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/End-Sem-SoundCloud-Music-Clone---EndSem-Project-Sound-Cloud---ndju1wdpc557/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/End-Sem-SoundCloud-Music-Clone---EndSem-Project-Sound-Cloud---ndju1wdpc557/index.html",
+    "main.eba59f21.css.map": "/End-Sem-SoundCloud-Music-Clone---EndSem-Project-Sound-Cloud---ndju1wdpc557/static/css/main.eba59f21.css.map",
+    "main.954a8794.js.map": "/End-Sem-SoundCloud-Music-Clone---EndSem-Project-Sound-Cloud---ndju1wdpc557/static/js/main.954a8794.js.map"
   },
   "entrypoints": [
-    "static/css/main.cb4d855a.css",
-    "static/js/main.6d8038ad.js"
+    "static/css/main.eba59f21.css",
+    "static/js/main.954a8794.js"
   ]
 }
